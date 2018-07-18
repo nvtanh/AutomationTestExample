@@ -6,7 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class MyClass {
 	public static void main(String[] args) {
         // declaration and instantiation of objects/variables
-    	System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+    	System.setProperty("webdriver.gecko.driver", "lib/geckodriver");
 		WebDriver driver = new FirefoxDriver();
 		//comment the above 2 lines and uncomment below 2 lines to use Chrome
 		//System.setProperty("webdriver.chrome.driver","G:\\chromedriver.exe");
