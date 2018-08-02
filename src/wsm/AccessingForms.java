@@ -51,7 +51,6 @@ public class AccessingForms {
         btnSubmitLogin.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".sidebar-nav li:nth-child(6)")));
-        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         Actions actions = new Actions(driver);
         WebElement manageUsersElement = driver.findElement(By.cssSelector(".sidebar-nav li:nth-child(6)"));
         actions.moveToElement(manageUsersElement).perform();
@@ -69,6 +68,13 @@ public class AccessingForms {
         WebElement staffTypeUserElement = driver.findElement(By.xpath("//*[@id=\"user_staff_type_id\"]"));
         Select staffTypeUserSelect= new Select(staffTypeUserElement) ;
         //staffTypeUserSelect.selectByVisibleText("Part-time");
-        staffTypeUserSelect.selectByIndex(2);   
+        staffTypeUserSelect.selectByIndex(2);
+        
+        WebElement groupUserElement = driver.findElement(By.xpath("//*[@id=\"user_staff_type_id\"]"));
+        Select groupUserUserSelect= new Select(staffTypeUserElement) ;
+        //groupUserUserSelect.selectByVisibleText("Part-time");
+        groupUserUserSelect.selectByIndex(2);   
+        
+	
 	}
 }
